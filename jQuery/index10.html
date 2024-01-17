@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    
+
+    <!-- <form>
+        <input type="text" name="name" placeholder="your name">
+        <button type="submit">Submit this form</button>
+    </form> -->
+
+    <form>
+        <input type="text" name="email" placeholder="e-mail">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <!-- <script>
+      $(document).ready(() => {
+        // $('form').on('submit', function(event) {
+        //     event.preventDefault()
+        //     console.log('form was not submitted...')
+        // })
+        // $('button').on('click', function(event) {
+        //     event.preventDefault()
+        //     console.log('Button is rendered useless.')
+        // })
+      })
+    </script> -->
+
+    <script>
+        $(document).ready(() => {
+            $('button').on('click', (e) => {
+                e.preventDefault()
+                console.log('Your email was not submitted...')
+            })
+        })
+    </script>
+</body>
+</html>

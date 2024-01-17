@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hover Events and Keyup Events
+    </h1>
+
+    <div id="box"></div>
+
+    <input type="text" class="select-me" value="hello world">
+    <input type="text" class="select-me" value="Type in here">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        // Mouse events down here
+        $(document).ready(() => {
+           $("#box")
+            .on("mouseenter", () => console.log("Your mouse is hovering over the box..."))
+            .on("mouseleave", () => console.warn("You leave the box.."))
+        })
+        //  Keyup events down below
+        $(document).ready(() => {
+            // $('.select-me').on('keyup', () => console.log('You pressed a key!'))
+            // Both the input are selected by class name, but using "$(this)" the console will only show the value from the input you pressed a key. 
+            $(".select-me").on("keyup", function() {
+                console.log($(this).val())
+            })
+            // in this case, if was an arrow function the code would not work. We need to declare an anonymous function to register the element selected by the class name so we can use "$(this)". 
+        })
+    </script>
+         
+            
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>
+        Ajax: GET Requests and Post Requests
+    </h1>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Get Request
+            $.get('https://swapi.dev/api/people/1/', function(data) {
+                console.log(data['name'])
+                console.log(data['height'])
+                console.log(data['mass'])
+            }) 
+            // Post Request
+            // $.post(url, data, function(data) {}) -> syntax
+            $.post(
+                'https://httpbin.org/post', 
+                {'Instagram': '@thegreatberenger'}, 
+                (data) => console.log('POST was complet with this data:', data)
+                )
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    
+    <h1>
+        Deleting an Element and Child Elements
+    </h1>
+    <!-- Deleting elements -->
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum dolorum facilis praesentium nesciunt veritatis at, blanditiis corporis vel quae necessitatibus, cumque velit ducimus. Laborum pariatur at cumque ratione maxime.
+        </p>
+        <p class="middle-paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, modi totam quam sunt cum ex maxime ullam exercitationem, ipsa fugit sapiente eveniet autem! Facere unde, quibusdam doloremque nostrum nisi placeat!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, modi totam quam sunt cum ex maxime ullam exercitationem, ipsa fugit sapiente eveniet autem! Facere unde, quibusdam doloremque nostrum nisi placeat!
+        </p>
+    </div>
+    <!-- Deleting child elements -->
+    <div id="parent">
+        <strong>Bolded word here</strong>
+        <em>Italicizes word here</em>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta non voluptatibus sint molestias quaerat sequi totam excepturi cum officia commodi alias beatae, nesciunt quia adipisci iste. Adipisci, tempore cumque!</p>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('div p.middle-paragraph').remove()
+
+            // $('div#parent').empty().html('<h1>Hello World</h1>') -- removes all div content and add a new html content
+            // "$" in var name means that var has a selector as its value
+            const $parent = $('div#parent')
+            // $parent.empty() -- no need to empty the div to add some content. If the content is gonna be fetched an API, so is good to empty first then fetch, cause the process could take a few seconds 
+            $parent.html('Stuff in here and there are no child elements')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>
+</head>
+<body>
+   <h1>
+        Custom title here
+   </h1>
+    <h1>
+        Custom title here 2
+    </h1>
+    <button class="custom-class">
+        custom button right here
+    </button>
+    <p class="custom-class">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iure rem modi explicabo unde tenetur? Labore, illum est? Error sequi suscipit quos nam! Numquam reiciendis perspiciatis iusto ullam voluptates voluptate!
+    </p>
+    <p id="customId">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, est quo autem amet id ipsum animi in similique alias maiores blanditiis ea quos cum nisi magni optio quibusdam laborum repudiandae.
+    </p>
+    <p>
+        <strong>strong text here. Change me muthafucka</strong>
+    </p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // $('h1, p').text('Changed via jQuery #2')
+            $('p.custom-class').text('changed again... #3')
+            $('#customId').text('another change here... #4')
+            $('body p strong').text('changed... #homework')
+            $('button').text('button was changed as well')
+        })
+ 
+    </script>
+</body>
+</html>
+

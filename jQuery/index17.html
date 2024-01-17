@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Toggling Fades and Displays
+    </h1>
+    
+    <button>Click me</button>
+    <div class="box"></div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('button').on('click', () => {
+                $('.box').fadeToggle() // fade in / fade out
+                // $('.box').toggle()  // hide / show
+            })
+        })
+    </script>
+
+</body>
+</html>

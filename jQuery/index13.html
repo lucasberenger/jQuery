@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .blue { 
+            background: blue;
+        }
+
+        .width-100 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Removing CSS Classes
+    </h1>
+
+    <button id="remove-width">remove width</button>
+    <button id="remove-blue">remove blue</button>
+
+    <div class="box blue width-100">Black Box</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+           const $box = $('.box')
+           const $removeBlue = $('#remove-blue')
+           const $removeWidth = $('#remove-width')
+
+           $removeBlue.on('click', () => {
+            $box.removeClass('blue')
+           })
+           $removeWidth.on('click', () => {
+            $box.removeClass('width-100')
+           })
+        })
+    </script>
+</body>
+</html>

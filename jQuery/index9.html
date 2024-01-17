@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Blur Events 
+    </h1>
+
+    <input type="text" name="blur-input" value="Blur off of me">
+    <input type="text" name="url" placeholder="type a website adress here...">
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("[name='blur-input']").on('blur', () => console.log('You blurred away from this input area.'))
+
+            // Adding http before the URL: 
+            $("[name='url']").on('blur', function() {
+                let websiteUrl = $(this).val()
+                if(websiteUrl.substr(0,4) !== 'http') {
+                    websiteUrl = `http://${websiteUrl}`
+                }
+                $(this).val( websiteUrl )
+            })
+        })
+        
+
+    </script>
+</body>
+</html>

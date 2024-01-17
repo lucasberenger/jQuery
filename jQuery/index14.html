@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background: #000;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>
+        Toggling CSS Classes
+    </h1>
+    <button class="toggle-blue-class">Toggle Blue</button>
+    <div class="box blue"></div>
+    <input type="text" placeholder="type 'change'...">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            const $box = $('.box')
+            $('.toggle-blue-class').on('click', () => {
+                $box.toggleClass('blue')
+            })
+            $('input').on('keyup', function() {
+                const value = $(this).val()
+                value === 'change' 
+                ? $box.toggleClass('blue') 
+                : console.log('type the word change and enter...')
+            })
+        })
+    </script>
+</body>
+</html>

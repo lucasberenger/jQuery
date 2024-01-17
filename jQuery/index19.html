@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Callback Functions
+    </h1>
+    <button>Click me</button>
+    <div class="box"></div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('button').on('click', () => {
+                $('.box').fadeOut(1500, () => {
+                    console.log('Fadeout complete...')
+                })
+            })
+        })
+    </script>
+</body>
+</html>

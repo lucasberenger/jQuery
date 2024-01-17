@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Project</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        
+        div {
+            height: 100px;
+            width: 200px;
+            border-radius: 20px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 100px;
+            border-radius: 20px;
+            padding: 5px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .width-100 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Star Wars Character Generator
+    </h1>
+    
+    
+    <div>
+        Your character is: 
+    </div>
+    
+    <button>
+        Generate!!!
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready( () => {
+            const randomNumber = Math.ceil(Math.random() * 20)
+            const $button = $('button')
+
+            $button.on('click', (e) => {
+                e.preventDefault()
+                $.get(`https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`, function(data) {
+                    $('div')
+                        .text(`${data.name} from ${data.homeworld}`)
+                        .animate({
+                            width: '100%'
+                        }, 2000)
+                })
+            })
+        })
+    </script>
+</body>
+</html>

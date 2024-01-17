@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>
+        Focus Events
+    </h1>
+    <textarea name="mytextarea" id="" cols="30" rows="10"></textarea>
+    <input type="text" name="myinput">
+    <input type="number" name="myinputnumber" placeholder="only numbers...">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        // we can select the element by its attributes, using the brackets "[]". Syntax: $("[name=...]")
+        $("[name='mytextarea']").on("focus", function() {
+            console.log("You focused into this textarea!")
+        })
+        $("[name='myinput']").on('focus', function() {
+          console.log('You focused into this input')
+        })
+
+        $("[name='myinputnumber']").on("focus", () => {
+          console.log('You have focused into the input number...')
+        })
+      })
+    </script>
+</body>
+</html>

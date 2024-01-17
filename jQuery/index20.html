@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Animations
+    </h1>
+
+    <button>Click me</button>
+    <div class="box"></div>
+    <!-- <button class="toCircle">To circle!</button> -->
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+           $('button').on('click', () => {
+            $('.box').animate({
+                opacity: 0.5, 
+                width: '500px',
+                // background: 'blue'// this property is not gonna work; only properties with values in numbers...
+            }, 4000)
+           })
+        //    $('.toCircle').on('click', () => {
+        //     $('.box').animate({
+        //         borderRadius: '200px'
+        //     }, 4000)
+        //    })
+        })
+    </script>
+</body>
+</html>

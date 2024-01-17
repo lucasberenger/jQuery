@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background: #000;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Resizing Window Event
+    </h1>
+
+    <button>Click me</button>
+    <div class="box"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(window).on('resize', () => {
+                console.log( $(window).width(), 'x', $(window).height() )
+                if($(window).width() <= 230) {
+                    $('body').css('background', 'black')
+                } else {
+                    $('body').css('background', 'white')
+                } 
+
+                if($(window).height() <= 500) {
+                    $('body').css('background', 'red')
+                } else {
+                    $('body').css('background', 'white')
+                }
+                    
+            })
+        })
+    </script>
+</body>
+</html>

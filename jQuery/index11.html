@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px auto;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hiding and Showing Elements
+    </h1>
+    <button id="hide-box">Hide box</button>
+    <button id="show-box">Show box</button>
+    <div id="box">
+        black box
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#hide-box').on('click', (e) => {
+                e.preventDefault()
+                $('#box').hide()                  
+            })
+
+            $('#show-box').on('click', (e) => {
+                e.preventDefault()
+                $('#box').show()
+            })
+        })
+    </script>
+</body>
+</html>

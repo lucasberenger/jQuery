@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .width-100 {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="blue">Change box color to blue!</button>
+    <button id="change-width">Chage the width of the box!</button>
+    <div class="box"></div>
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#blue').on('click', () => {
+                $('.box').addClass('blue')
+            })
+            
+            $('#change-width').on('click', () => {
+                $('.box').addClass('width-100')
+            })
+        })
+
+    </script>
+</body>
+</html>

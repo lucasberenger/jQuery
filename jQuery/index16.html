@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Fading in and Fading out...
+    </h1>
+    <button class="fadeOut">Fade out</button>
+    <button class="fadeIn">Fade in</button>
+    <div class="box"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+           $('.fadeOut').on('click', () => {
+            $('.box').fadeOut()  //you can put the time into ()
+           }) 
+           $('.fadeIn').on('click', () => {
+            $('.box').fadeIn() //same 
+           })
+        })
+    </script>
+</body>
+</html>
