@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4e522e190a.js" crossorigin="anonymous"></script>
+    <title>Task List</title>
+</head>
+<body>
+    <header class="h-25 w-100 d-flex justify-content-evenly align-items-center p-2 border-bottom border-dark-subtle bg-dark bg-gradient text-white text-end shadow-sm position-relative">
+        <h1 class="ms-3">
+            Task List
+        </h1>
+    
+        <nav>
+            <ul class="d-none d-md-flex list-unstyled">
+                <li class="mx-2 mt-3"><a href="http://linkedin.com/in/lucas-berenger" target="_blank"><i class="fa-brands fa-linkedin fa-2x text-white"></i></a></li>
+                <li class="mx-2 mt-3"><a href="https://github.com/lucasberenger" target="_blank"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container h-100 w-100 d-flex flex-column align-items-center mt-3 gap-2">
+        <div id="task-box" class="h-100 w-75 d-flex flex-column align-items-center border rounded">
+            <div id="task-box-input-area" class="p-2 d-flex flex-column gap-3 flex-md-row">
+                <input type="text" class="p-2 p-md-1 border rounded">
+                <button id="addTask" class="btn btn-primary btn-md">Add a task</button>
+            </div>
+        </div>
+        <div id="task-enter" class="h-100 w-75 d-flex flex-column p-2 border rounded">
+            <ul>
+                
+            </ul>
+        </div>
+        <div id="task-clear-box">
+            <button id="clearTasks" class="btn btn-primary btn-md">Clear</button>
+        </div>
+    </main>
+
+    <section class="container p-2 h-100 w-50 mt-5 border border-primary rounded">
+        <h2>Hello!</h2>
+        <p>This is one of my projects from <a href="https://www.udemy.com/course/the-ultimate-fullstack-web-development-bootcamp/" target="_blank">The Ultimate Fullstack Web Development Bootcamp</a>, a course by Mr. Kalob Taulien.</p>
+        <p>This Task List was made using <a href="https://jquery.com/" target="_blank" class="link-info">jQuery</a> and <a href="https://getbootstrap.com/" target="_blank" class="link-info">Bootstrap</a>.</p>
+    </section>
+
+    <footer class="mt-4 d-flex flex-column align-items-center justify-content-center">
+        <ul class="d-flex d-md-none list-unstyled">
+            <li class="mx-2 mt-3"><a href="http://linkedin.com/in/lucas-berenger" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li class="mx-2 mt-3"><a href="https://github.com/lucasberenger" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+        </ul>
+    </footer>
+            
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Bootstrap Scritps -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
